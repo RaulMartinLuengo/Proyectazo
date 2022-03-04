@@ -64,3 +64,10 @@ export async function getLangAmountJoke(lang,amount) {
 
   return joke;
 }
+//Se devuelve un chiste aleatorio que contenga la palabra que se pase
+export async function getFilterJoke(filter) {
+  const data = await fetch(URL_JOKEAPI.concat("/any?contains="+filter));
+  const joke = await data.json();
+
+  return joke;
+}
