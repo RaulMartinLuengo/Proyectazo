@@ -3,7 +3,7 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable import/prefer-default-export */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ArticuloEncabezado } from './Encabezado/ArticuloEncabezado';
 import Categorias from './Categorias/Categorias';
 import Tematica from './Tematica/Tematica';
@@ -12,38 +12,38 @@ import Idioma from './Idioma/Idioma';
 import Busqueda from './Busqueda/Busqueda';
 import Cantidad from './Cantidad/Cantidad';
 import Chistes from './Chistes/Chistes';
-import { getCategoryJoke } from '../services/FecthCategory/FecthCategory';
+import { getAmountJoke, getCategoryJoke } from '../services/jokeApi';
 
 function App() {
-  const [jokes, setJokes] = useState();
-  useEffect(() => {
-    // declaramos la función asíncrona que llama al servicio
+  const [jokes, setJokes] = useState({});
+  const toggleAmount = (amount) => {
     async function fetchJokes() {
-      const jokeCategory = await getCategoryJoke();
+      const jokeCategory = await getAmountJoke(amount);
       setJokes(jokeCategory);
     }
-    // llamamos a la función
     fetchJokes();
-  });
-
+  };
+  const toggleCategory = (categoryname) => {
+    async function fetchJokes() {
+      const jokeCategory = await getCategoryJoke(categoryname);
+      setJokes(jokeCategory);
+    }
+    fetchJokes();
+  };
+  return (
     <>
       <ArticuloEncabezado />
-      <Categorias />
+      <Categorias toggleCategory={toggleCategory} />
       <Tematica />
       <Longitud />
       <Idioma />
       <Busqueda />
-      <Cantidad />
-      <div>
-        {jokes.map((joke) => (
-          <Chistes joke={joke} />
-        ))}
-      </div>
-
+      <Cantidad toggleAmount={toggleAmount} />
+      <Chistes joke={jokes} />
       <button type="submit">Enviar</button>
       <button type="reset">Resetear</button>
 
-    </>;
-    document.getElementById('root');
+    </>
+  );
 }
 export default App;
