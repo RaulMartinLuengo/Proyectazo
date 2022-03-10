@@ -3,17 +3,11 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable global-require */
 import React from 'react';
+import getImagesUrl from './images';
 /* Recibir array y recorrerlo */
 function Chistes({ joke }) {
   let chiste;
-
-  async function fetchImg() {
-    const data = await fetch('../../services/images.json');
-    const img = await data.json();
-
-    return img;
-  }
-  console.log(fetchImg());
+  const url = getImagesUrl(Math.round(Math.random() * 21));
   if (typeof joke === 'string') {
     return (
       <h2>{joke}</h2>
@@ -37,7 +31,7 @@ function Chistes({ joke }) {
           <fieldset key={jokes.id}>
             <h3>{jokes.category}</h3>
             <p>{chiste}</p>
-            <img src={require('../../img/1.jpeg')} alt="Perro" />
+            <img src={url} alt="Perro" />
           </fieldset>
         );
       })
@@ -48,8 +42,9 @@ function Chistes({ joke }) {
     <fieldset>
       <h3>{joke.category}</h3>
       <p>{chiste}</p>
-      <img src={require('../../img/1.jpeg')} alt="Perro" />
+      <img src={url} alt="Perro" />
     </fieldset>
   );
 }
+
 export default Chistes;
