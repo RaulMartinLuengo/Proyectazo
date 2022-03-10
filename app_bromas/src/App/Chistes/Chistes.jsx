@@ -7,7 +7,6 @@ import getImagesUrl from './images';
 /* Recibir array y recorrerlo */
 function Chistes({ joke }) {
   let chiste;
-  const url = getImagesUrl(Math.round(Math.random() * 21));
   if (typeof joke === 'string') {
     return (
       <h2>{joke}</h2>
@@ -31,7 +30,7 @@ function Chistes({ joke }) {
           <fieldset key={jokes.id}>
             <h3>{jokes.category}</h3>
             <p>{chiste}</p>
-            <img src={url} alt="Perro" />
+            <img src={getImagesUrl(Math.round(Math.random() * 21))} alt="Perro" />
           </fieldset>
         );
       })
@@ -42,7 +41,7 @@ function Chistes({ joke }) {
     <fieldset>
       <h3>{joke.category}</h3>
       <p>{chiste}</p>
-      <img src={url} alt="Perro" />
+      <img src={getImagesUrl(Math.round(Math.random() * 21))} alt="Perro" />
     </fieldset>
   );
 }
