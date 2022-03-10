@@ -6,6 +6,19 @@ import React from 'react';
 /* Recibir array y recorrerlo */
 function Chistes({ joke }) {
   let chiste;
+
+  async function fetchImg() {
+    const data = await fetch('../../services/images.json');
+    const img = await data.json();
+
+    return img;
+  }
+  console.log(fetchImg());
+  if (typeof joke === 'string') {
+    return (
+      <h2>{joke}</h2>
+    );
+  }
   if (joke.amount === undefined) {
     if (joke.type === 'single') {
       chiste = joke.joke;
@@ -24,17 +37,18 @@ function Chistes({ joke }) {
           <fieldset key={jokes.id}>
             <h3>{jokes.category}</h3>
             <p>{chiste}</p>
-            <img src={require('../../img/perro.jpg')} alt="Perro" />
+            <img src={require('../../img/1.jpeg')} alt="Perro" />
           </fieldset>
         );
       })
     );
   }
+
   return (
     <fieldset>
       <h3>{joke.category}</h3>
       <p>{chiste}</p>
-      <img src={require('../../img/perro.jpg')} alt="Perro" />
+      <img src={require('../../img/1.jpeg')} alt="Perro" />
     </fieldset>
   );
 }

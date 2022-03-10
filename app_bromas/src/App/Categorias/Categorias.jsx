@@ -5,34 +5,54 @@
 /* eslint-disable global-require */
 import React from 'react';
 
-function Categorias({ toggleCategory }) {
+function Categorias({
+  toggleCategory, toggleCategoryAmount, toggleCategoryLength, toggleCategoryAmountLength,
+}) {
+  let amountCategoryJoke;
+  let lengthCategoryJoke;
+  const categoryAmountChange = (amount) => {
+    amountCategoryJoke = amount;
+  };
+  const categoryLengthChange = (length) => {
+    lengthCategoryJoke = length;
+  };
   const categoryChange = (category) => {
-    if (category.target.checked) {
-      toggleCategory(category.target.id);
+    if (lengthCategoryJoke !== undefined && amountCategoryJoke === undefined) {
+      if (lengthCategoryJoke !== 'Cualquiera') {
+        toggleCategoryLength(category, lengthCategoryJoke);
+      } else {
+        toggleCategory(category);
+      }
+    } else if (amountCategoryJoke !== undefined && lengthCategoryJoke === undefined) {
+      toggleCategoryAmount(category, amountCategoryJoke);
+    } else if (amountCategoryJoke !== undefined && lengthCategoryJoke !== undefined) {
+      if (lengthCategoryJoke !== 'Cualquiera') {
+        toggleCategoryAmountLength(category, lengthCategoryJoke, amountCategoryJoke);
+        // NO BORRAR: Se pone para que el proceso termine aqui y no haga dos fetch
+      }
+    } else {
+      toggleCategory(category);
     }
   };
   return (
     <section id="categorias">
       <h2>Categorías</h2>
+      <div onClick={(event) => categoryChange(event.target.id)}>
+        <input type="button" id="Misc" value="General" />
+        <input type="button" id="Programming" value="Programación" />
+        <input type="button" id="Dark" value="Chiste Negro" />
+        <input type="button" id="Pun" value="Actualidad" />
+        <input type="button" id="Spooky" value="Terror" />
+        <input type="button" id="Christmas" value="Navidad" />
+      </div>
+      <select name="select" onChange={(event) => categoryLengthChange(event.target.value)}>
+        <option value="Cualquiera">Me da igual</option>
+        <option value="single">Cortos</option>
+        <option value="twopart">Largos</option>
+      </select>
 
-      <input type="checkbox" id="Misc" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Misc">General</label>
-
-      <input type="checkbox" id="Programming" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Programming">Programación</label>
-
-      <input type="checkbox" id="Dark" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Dark">Chistes negros</label>
-
-      <input type="checkbox" id="Pun" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Pun">Actualidad</label>
-
-      <input type="checkbox" id="Spooky" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Spooky">Terror</label>
-
-      <input type="checkbox" id="Christmas" onChange={(event) => categoryChange(event)} />
-      <label htmlFor="Christmas">Navidad</label>
-
+      <label htmlFor="numChistes">Inserta el número:</label>
+      <input type="number" id="numChistes" min="1" max="5" onChange={(event) => categoryAmountChange(event.target.value)} />
     </section>
   );
 }

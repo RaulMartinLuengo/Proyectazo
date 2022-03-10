@@ -58,16 +58,15 @@ export async function getLangJoke(lang) {
 
   return joke;
 }
-// Se devuelve un array de chistes aleatorio en un idioma concreto
-export async function getLangAmountJoke(lang, amount) {
-  const data = await fetch(URL_JOKEAPI.concat(`/any?lang=${lang}&amount=${amount}`));
+// Se devuelve un chiste aleatorio que contenga la palabra que se pase
+export async function getFilterJoke(filter) {
+  const data = await fetch(URL_JOKEAPI.concat(`/any?contains=${filter}`));
   const joke = await data.json();
 
   return joke;
 }
-// Se devuelve un chiste aleatorio que contenga la palabra que se pase
-export async function getFilterJoke(filter) {
-  const data = await fetch(URL_JOKEAPI.concat(`/any?contains=${filter}`));
+export async function getLengthJoke(length) {
+  const data = await fetch(URL_JOKEAPI.concat(`/any?type=${length}`));
   const joke = await data.json();
 
   return joke;

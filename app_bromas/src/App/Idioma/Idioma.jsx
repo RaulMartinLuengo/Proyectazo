@@ -1,14 +1,21 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable global-require */
 import React from 'react';
 
-function Idioma() {
+export default function Idioma({ toggleLanguage }) {
+  const handleChangeLanguage = (language) => {
+    toggleLanguage(language);
+  };
   return (
     <section id="idioma">
       <h2>Seleccione el idioma</h2>
-      <select name="select">
-        <option value="Idioma">Español</option>
-        <option value="Idioma">Inglés</option>
+      <select name="select" onChange={(event) => handleChangeLanguage(event.target.value)}>
+        <option value="es">Español</option>
+        <option value="en">Ingles</option>
       </select>
     </section>
   );
 }
-export default Idioma;

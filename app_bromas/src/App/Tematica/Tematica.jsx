@@ -1,26 +1,27 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable global-require */
 import React from 'react';
 
-function Tematica() {
+function Tematica({ toggleFlags }) {
+  const handleFlags = (flag) => {
+    toggleFlags(flag);
+  };
   return (
-    <section id="tematica">
-      <h2>Emite el contenido no deseado</h2>
+    <section id="tematica" onClick={(evento) => handleFlags(evento.target.id)}>
+      <h2>Chiste aleatorio sin contenido no deseado</h2>
 
-      <input type="checkbox" id="Sexuales" />
-      <label htmlFor="Sexuales">Sexuales</label>
+      <input type="button" value="Sexuales" id="nsfw" />
 
-      <input type="checkbox" id="Religiosos" />
-      <label htmlFor="Religiosos">Religiosos</label>
+      <input type="button" value="Religiosos" id="religious" />
 
-      <input type="checkbox" id="Políticos" />
-      <label htmlFor="Políticos">Políticos</label>
+      <input type="button" value="Políticos" id="political" />
 
-      <input type="checkbox" id="Racistas" />
-      <label htmlFor="Racistas">Racistas</label>
+      <input type="button" value="Racistas" id="racist" />
 
-      <input type="checkbox" id="Explícito" />
-      <label htmlFor="Explícito">Explícito</label>
-
+      <input type="button" value="Explícito" id="explicit" />
     </section>
   );
 }
