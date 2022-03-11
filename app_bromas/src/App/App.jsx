@@ -4,6 +4,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import React, { useState } from 'react';
+import './App.css';
 import {
   BrowserRouter as Router,
   Switch,

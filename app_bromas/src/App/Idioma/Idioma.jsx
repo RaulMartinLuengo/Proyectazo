@@ -10,7 +10,7 @@ export default function Idioma({ toggleLanguage }) {
     toggleLanguage(language);
   };
   return (
-    <section id="idioma">
+    <section id="idioma" class="idioma">
       <h2>Seleccione el idioma</h2>
       <select name="select" onChange={(event) => handleChangeLanguage(event.target.value)}>
         <option value="es">Español</option>

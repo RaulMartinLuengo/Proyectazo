@@ -35,16 +35,19 @@ function Categorias({
     }
   };
   return (
-    <section id="categorias">
-      <h2>Categorías</h2>
+    <section id="categorias" class="categorias">
+      <fieldset>
+      <legend>Categorías</legend>
+      </fieldset>
       <div onClick={(event) => categoryChange(event.target.id)}>
-        <input type="button" id="Misc" value="General" />
-        <input type="button" id="Programming" value="Programación" />
-        <input type="button" id="Dark" value="Chiste Negro" />
-        <input type="button" id="Pun" value="Actualidad" />
-        <input type="button" id="Spooky" value="Terror" />
-        <input type="button" id="Christmas" value="Navidad" />
+        <input type="button" id="Misc" class="categorias__general" value="General" />
+        <input type="button" id="Programming" class="categorias__programacion" value="Programación" />
+        <input type="button" id="Dark" class="categorias__dark" value="Chiste Negro" />
+        <input type="button" id="Pun" class="categorias__actualidad" value="Actualidad" />
+        <input type="button" id="Spooky" class="categorias__terror" value="Terror" />
+        <input type="button" id="Christmas" class="categorias__navidad" value="Navidad" />
       </div>
+
       <select name="select" onChange={(event) => categoryLengthChange(event.target.value)}>
         <option value="Cualquiera">Me da igual</option>
         <option value="single">Cortos</option>
@@ -52,7 +55,7 @@ function Categorias({
       </select>
 
       <label htmlFor="numChistes">Inserta el número:</label>
-      <input type="number" id="numChistes" min="1" max="5" onChange={(event) => categoryAmountChange(event.target.value)} />
+      <input type="number" id="numChistes" class="categorias_nchistes" min="1" max="5" onChange={(event) => categoryAmountChange(event.target.value)} />
     </section>
   );
 }
