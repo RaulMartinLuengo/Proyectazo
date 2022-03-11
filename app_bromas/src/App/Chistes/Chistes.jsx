@@ -30,7 +30,7 @@ function Chistes({ joke }) {
           <fieldset key={jokes.id}>
             <h3>{jokes.category}</h3>
             <p>{chiste}</p>
-            <img src={getImagesUrl(Math.round(Math.random() * 21))} alt="Perro" />
+            <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Perro" />
           </fieldset>
         );
       })
@@ -41,7 +41,7 @@ function Chistes({ joke }) {
     <fieldset>
       <h3>{joke.category}</h3>
       <p>{chiste}</p>
-      <img src={getImagesUrl(Math.round(Math.random() * 21))} alt="Perro" />
+      <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Perro" />
     </fieldset>
   );
 }
