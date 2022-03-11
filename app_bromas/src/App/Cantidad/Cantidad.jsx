@@ -10,10 +10,11 @@ function Cantidad({ toggleAmount }) {
     toggleAmount(valor);
   };
   return (
-    <section id="cantidad" class="cantidad">
+    <section id="cantidad" className="cantidad">
       <h2>Cuantos chistes aleatorios quieres??</h2>
+      <hr />
       <label htmlFor="numChistes">Inserta el número:</label>
-      <input type="number" id="numChistes" class="cantidad__nchistes" min="0" max="5" onChange={(event) => handleChangeAmount(event.target.value)} />
+      <input type="number" id="numChistes" min="0" max="5" onChange={(event) => handleChangeAmount(event.target.value)} className="cantidad__numChistes" />
     </section>
   );
 }

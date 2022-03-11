@@ -10,18 +10,18 @@ function Tematica({ toggleFlags }) {
     toggleFlags(flag);
   };
   return (
-    <section id="tematica" class="tematica" onClick={(evento) => handleFlags(evento.target.id)}>
+    <section id="tematica" onClick={(evento) => handleFlags(evento.target.id)} className="tematica">
       <h2>Chiste aleatorio sin contenido no deseado</h2>
+      <hr />
+      <input type="button" value="Sexuales" id="nsfw" className="tematica__button" />
 
-      <input type="button" value="Sexuales" id="nsfw" class="tematica__sex" />
+      <input type="button" value="Religiosos" id="religious" className="tematica__button" />
 
-      <input type="button" value="Religiosos" id="religious" class="tematica__religiosos"/>
+      <input type="button" value="Políticos" id="political" className="tematica__button" />
 
-      <input type="button" value="Políticos" id="political" class="tematica__politicos"/>
+      <input type="button" value="Racistas" id="racist" className="tematica__button" />
 
-      <input type="button" value="Racistas" id="racist" class="tematica__racistas"/>
-
-      <input type="button" value="Explícito" id="explicit" class="tematica__explicito"/>
+      <input type="button" value="Explícito" id="explicit" className="tematica__button" />
     </section>
   );
 }

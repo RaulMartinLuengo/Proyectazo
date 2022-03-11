@@ -9,9 +9,10 @@ function Longitud({ toggleLength }) {
     toggleLength(length);
   };
   return (
-    <section id="Longitud" class="longitud">
+    <section id="Longitud" className="longitud">
       <h2>Si quieres chistes aleatorios ¿Cortos o Largos?</h2>
-      <select name="select" onChange={(evento) => handleLength(evento.target.value)}>
+      <hr />
+      <select name="select" onChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
         <option value="single">Cortos</option>
         <option value="twopart">Largos</option>
       </select>

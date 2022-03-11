@@ -96,24 +96,25 @@ export function App() {
     setJokes(defaultJoke);
   };
   return (
-    <>
-      <Router>
-        <nav onClick={handleJoke}>
-          <Link to="/">Home</Link>
-          <br />
-          <Link to="/categorias">Categorias</Link>
-          <br />
-          <Link to="/tematica">Tematica</Link>
-          <br />
-          <Link to="/longitud">Longitud</Link>
-          <br />
-          <Link to="/idioma">Idioma</Link>
-          <br />
-          <Link to="/busqueda">Busqueda</Link>
-          <br />
-          <Link to="/cantidad">Cantidad</Link>
-        </nav>
-        <main>
+    <Router>
+      <nav onClick={handleJoke}>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/categorias">Categorias</Link>
+        <br />
+        <Link to="/tematica">Tematica</Link>
+        <br />
+        <Link to="/longitud">Longitud</Link>
+        <br />
+        <Link to="/idioma">Idioma</Link>
+        <br />
+        <Link to="/busqueda">Busqueda</Link>
+        <br />
+        <Link to="/cantidad">Cantidad</Link>
+      </nav>
+      <main>
+
+        <div className="container">
           <Switch>
             <Route path="/categorias">
               <Categorias toggleCategory={toggleCategory} toggleCategoryAmount={toggleCategoryAmount} toggleCategoryLength={toggleCategoryLength} toggleCategoryAmountLength={toggleCategoryLengthAmount} />
@@ -150,10 +151,8 @@ export function App() {
               <ArticuloEncabezado />
             </Route>
           </Switch>
-        </main>
-      </Router>
-      
-
-    </>
+        </div>
+      </main>
+    </Router>
   );
 }

@@ -1,0 +1,195 @@
+body{ 
+    width: 90%;
+    margin: 0 auto;
+    margin-top:5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    border: 5px solid green;
+    display: flex;
+    flex-wrap:initial;
+    background-color: gainsboro;
+}
+
+.encabezado{
+    border: 2px solid blue;
+}
+/*-------------------------------------*/
+.categorias{
+    border: 2px solid red;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+.categorias h2{
+    font-size: 24px;
+}
+.categorias hr{
+    width: 75%;
+    margin-top: -5%;
+}
+.categorias__button{ 
+    background-color: #2079b0;
+    border-radius: 5px;
+    margin:7.5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    color:whitesmoke; 
+}
+
+.categorias__select{ 
+    border-radius: 5px;
+    margin:5%;
+    margin-bottom: 9%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+
+.categorias__numChistes{ 
+    border-radius: 3px; 
+    margin-bottom:10%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+/*-------------------------------------------------*/
+.tematica{
+    border: 2px solid blue;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+
+.tematica__button{
+    background-color: #2079b0;
+    border-radius: 5px;
+    margin:7.5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    color:whitesmoke;  
+}
+
+.tematica hr{    
+    width: 75%;
+    margin-top: -5%;
+}
+
+/*--------------------------------------------------*/
+
+.longitud{
+    border: 2px solid red;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+
+.longitud__select{ 
+    border-radius: 5px;
+    margin:5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+.longitud hr{    
+    width: 75%;
+    margin-top: -5%;
+}
+/*--------------------------------------------------------------*/
+
+.idioma{
+    border: 2px solid blue;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+.idioma__select{ 
+    border-radius: 5px;
+    margin:5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+.idioma hr{    
+    width: 75%;
+    margin-top: -5%;
+}
+
+/*-------------------------------------------------------------*/
+.busqueda{
+    border: 2px solid red;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+
+.busqueda__input{
+    border-radius: 5px;
+    margin:5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+
+.busqueda hr{    
+    width: 75%;
+    margin-top: -5%;
+    margin-bottom: 7.5%;
+}
+
+/*-------------------------------------------------------*/
+.cantidad{
+    border: 2px solid blue;
+    margin: 0 auto;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    width: 20%;
+}
+.cantidad__numChistes{
+    border-radius: 5px;
+    margin:5%;
+    padding: 5%;
+    font-size: 14px;
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+}
+.cantidad hr{    
+    width: 75%;
+    margin-top: -5%;
+    margin-bottom: 7.5%;
+}
+
+/*
+  background-image: linear-gradient(to bottom right, #f3f3f3, #007fce);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+  box-shadow: 2px 2px 5px #999;
+*/
