@@ -97,60 +97,61 @@ export function App() {
   };
   return (
     <Router>
-      <nav onClick={handleJoke}>
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/categorias">Categorias</Link>
-        <br />
-        <Link to="/tematica">Tematica</Link>
-        <br />
-        <Link to="/longitud">Longitud</Link>
-        <br />
-        <Link to="/idioma">Idioma</Link>
-        <br />
-        <Link to="/busqueda">Busqueda</Link>
-        <br />
-        <Link to="/cantidad">Cantidad</Link>
-      </nav>
       <main>
-
         <div className="container">
-          <Switch>
-            <Route path="/categorias">
-              <Categorias toggleCategory={toggleCategory} toggleCategoryAmount={toggleCategoryAmount} toggleCategoryLength={toggleCategoryLength} toggleCategoryAmountLength={toggleCategoryLengthAmount} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            <Route path="/tematica">
-              <Tematica toggleFlags={toggleFlags} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            <Route path="/longitud">
-              <Longitud toggleLength={toggleLength} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            <Route path="/idioma">
-              <Idioma toggleLanguage={toggleLanguage} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            <Route path="/busqueda">
-              <Busqueda toggleWord={toggleWord} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            <Route path="/cantidad">
-              <Cantidad toggleAmount={toggleAmount} />
-              <Chistes joke={jokes} />
-              <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
-            </Route>
-            {/* Cuidado: El / siempre va al final del Switch */}
-            <Route path="/">
-              <ArticuloEncabezado />
-            </Route>
-          </Switch>
+          <div className="centrarya">
+            <nav onClick={handleJoke} className="centrarya__nav">
+              <ul className="todo-menu">
+                <li><Link to="/" className="centrarya__nav--link">Home</Link></li>
+                <li><Link to="/categorias" className="centrarya__nav--link">Categorias</Link></li>
+                <li><Link to="/tematica" className="centrarya__nav--link">Tematica</Link></li>
+                <li><Link to="/longitud" className="centrarya__nav--link">Longitud</Link></li>
+                <li><Link to="/idioma" className="centrarya__nav--link">Idioma</Link></li>
+                <li><Link to="/busqueda" className="centrarya__nav--link">Busqueda</Link></li>
+                <li><Link to="/cantidad" className="centrarya__nav--link">Cantidad</Link></li>
+              </ul>
+            </nav>
+          </div>
+          <div className="container2">
+            <Switch>
+              <Route path="/categorias">
+                <Categorias toggleCategory={toggleCategory} toggleCategoryAmount={toggleCategoryAmount} toggleCategoryLength={toggleCategoryLength} toggleCategoryAmountLength={toggleCategoryLengthAmount} />
+                <div className="categorias__chiste">
+                  <Chistes joke={jokes} />
+                  <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+                </div>
+              </Route>
+              <Route path="/tematica">
+                <Tematica toggleFlags={toggleFlags} />
+                <Chistes joke={jokes} />
+                <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+              </Route>
+              <Route path="/longitud">
+                <Longitud toggleLength={toggleLength} />
+                <Chistes joke={jokes} />
+                <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+              </Route>
+              <Route path="/idioma">
+                <Idioma toggleLanguage={toggleLanguage} />
+                <Chistes joke={jokes} />
+                <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+              </Route>
+              <Route path="/busqueda">
+                <Busqueda toggleWord={toggleWord} />
+                <Chistes joke={jokes} />
+                <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+              </Route>
+              <Route path="/cantidad">
+                <Cantidad toggleAmount={toggleAmount} />
+                <Chistes joke={jokes} />
+                <button type="reset" onClick={handleJoke}>Limpiar Chistes</button>
+              </Route>
+              {/* Cuidado: El / siempre va al final del Switch */}
+              <Route path="/">
+                <ArticuloEncabezado />
+              </Route>
+            </Switch>
+          </div>
         </div>
       </main>
     </Router>

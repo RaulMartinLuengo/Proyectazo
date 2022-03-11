@@ -46,14 +46,20 @@ function Categorias({
         <input type="button" id="Spooky" value="Terror" className="categorias__button" />
         <input type="button" id="Christmas" value="Navidad" className="categorias__button" />
       </div>
-      <select name="select" onChange={(event) => categoryLengthChange(event.target.value)} className="categorias__select">
-        <option value="Cualquiera">Me da igual</option>
-        <option value="single">Cortos</option>
-        <option value="twopart">Largos</option>
-      </select>
-
-      <label htmlFor="numChistes">Inserta el número:</label>
-      <input type="number" id="numChistes" min="1" max="5" className="categorias__numChistes" onChange={(event) => categoryAmountChange(event.target.value)} />
+      <div className="categorias__inputs">
+        <div className="categorias__numChistes">
+          <label htmlFor="selectChiste">Quieres chistes cortos o largos?</label>
+          <select name="select" id="selectChiste" onChange={(event) => categoryLengthChange(event.target.value)} className="categorias__select">
+            <option value="Cualquiera">Me da igual</option>
+            <option value="single">Cortos</option>
+            <option value="twopart">Largos</option>
+          </select>
+        </div>
+        <div className="categorias__numChistes">
+          <label htmlFor="numChistes">Cuantos chistes quieres ver?:</label>
+          <input type="number" id="numChistes" min="1" max="5" className="categorias__numChistes--input" onChange={(event) => categoryAmountChange(event.target.value)} />
+        </div>
+      </div>
     </section>
   );
 }

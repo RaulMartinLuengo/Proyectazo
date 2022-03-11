@@ -1,42 +1,53 @@
 body{ 
     width: 90%;
-    margin: 0 auto;
-    margin-top:5%;
+    margin: 0 auto; 
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .container{
+    display: flex;
+    flex-direction: column;
+}
+.container2{
     border: 5px solid green;
     display: flex;
-    flex-wrap:initial;
+    flex-direction:column;
     background-color: gainsboro;
 }
 
 .encabezado{
     border: 2px solid blue;
 }
-/*-------------------------------------*/
+/*---------------------@CATEGORIAS-------------------------*/
 .categorias{
     border: 2px solid red;
     margin: 0 auto;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/
 }
 .categorias h2{
     font-size: 24px;
 }
 .categorias hr{
     width: 75%;
-    margin-top: -5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.categorias__inputs{
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
 }
 .categorias__button{ 
     background-color: #2079b0;
     border-radius: 5px;
-    margin:7.5%;
-    padding: 5%;
-    font-size: 14px;
+    margin:3%;
+    padding: 15px;
+    font-size: 16px;
     font-weight:500;
     border: 0;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
@@ -44,25 +55,40 @@ body{
 }
 
 .categorias__select{ 
-    border-radius: 5px;
-    margin:5%;
-    margin-bottom: 9%;
-    padding: 5%;
-    font-size: 14px;
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
     font-weight:500;
     border: 0;    
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+    width: 100%;
 }
 
-.categorias__numChistes{ 
-    border-radius: 3px; 
-    margin-bottom:10%;
-    padding: 5%;
-    font-size: 14px;
+.categorias__numChistes{      
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto auto auto auto;
+}
+.categorias__numChistes--input{    
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
     font-weight:500;
     border: 0;    
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+    width: 100%;
 }
+.categorias__chiste{
+text-align: center;
+}
+
+
 /*-------------------------------------------------*/
 .tematica{
     border: 2px solid blue;
@@ -187,6 +213,54 @@ body{
     margin-top: -5%;
     margin-bottom: 7.5%;
 }
+
+/*--------------------------@MENU---------------------------------------------*/
+
+.centrarya {  
+    height: 60px; 
+    text-align: center;
+    background-color: #ffffff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1px; 
+    margin-top: -20px;  
+    
+    margin: 25px auto 5px auto;
+        /*arriba, der, abajo, izq*/
+}
+nav {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -10px;
+    margin-right: 27.5%;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  .todo-menu>li {
+    float: left;
+  }
+  
+  .todo-menu li a {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 22px;
+  }
+  
+  .todo-menu li a:hover {
+    background-color: #d6d6d6;
+    border: 2px solid rgb(128, 128, 128);
+  }
+  
 
 /*
   background-image: linear-gradient(to bottom right, #f3f3f3, #007fce);
