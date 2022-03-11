@@ -17,6 +17,27 @@ body{
 .encabezado{
     border: 2px solid blue;
 }
+
+.chiste__button{
+    background-color: #2079b0;
+    border-radius: 5px;
+    margin:3%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight:500;
+    border: 0;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    color:whitesmoke; 
+}
+.render__chiste{
+    text-align: center;
+    width: 75%;
+    margin:0 auto;
+}
+.render__chiste img{
+    height: 50%;
+    width: 50%;
+}
 /*---------------------@CATEGORIAS-------------------------*/
 .categorias{
     border: 2px solid red;
@@ -84,36 +105,38 @@ body{
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
     width: 100%;
 }
-.categorias__chiste{
-text-align: center;
-}
 
-
+ 
 /*-------------------------------------------------*/
 .tematica{
-    border: 2px solid blue;
+    border: 2px solid red;
     margin: 0 auto;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/
 }
-
+.tematica h2{
+    font-size: 24px;
+}
 .tematica__button{
     background-color: #2079b0;
     border-radius: 5px;
-    margin:7.5%;
-    padding: 5%;
-    font-size: 14px;
+    margin:3%;
+    padding: 15px;
+    font-size: 16px;
     font-weight:500;
     border: 0;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
-    color:whitesmoke;  
+    color:whitesmoke; 
 }
 
 .tematica hr{    
     width: 75%;
-    margin-top: -5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /*--------------------------------------------------*/
@@ -124,46 +147,74 @@ text-align: center;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
-}
-
-.longitud__select{ 
-    border-radius: 5px;
-    margin:5%;
-    padding: 5%;
-    font-size: 14px;
-    font-weight:500;
-    border: 0;    
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/ 
 }
 .longitud hr{    
     width: 75%;
-    margin-top: -5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-/*--------------------------------------------------------------*/
+.longitud__cont{      
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto auto auto auto;
+    display: flex;
+    width: 80%;
+    margin-top: 5%;
+}
+.longitud__select{ 
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
+    font-weight:500;
+    border: 0;    
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);  
+}
+
+
+/*--------------------@idioma------------------------------------------*/
 
 .idioma{
-    border: 2px solid blue;
+    border: 2px solid red;
     margin: 0 auto;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/
 }
 .idioma__select{ 
-    border-radius: 5px;
-    margin:5%;
-    padding: 5%;
-    font-size: 14px;
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
     font-weight:500;
     border: 0;    
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);  
 }
 .idioma hr{    
     width: 75%;
-    margin-top: -5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-
+.idioma__cont{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto auto auto auto;
+    display: flex;
+    width: 80%;
+    margin-top: 5%;
+}
 /*-------------------------------------------------------------*/
 .busqueda{
     border: 2px solid red;
@@ -171,14 +222,17 @@ text-align: center;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/ 
 }
 
 .busqueda__input{
-    border-radius: 5px;
-    margin:5%;
-    padding: 5%;
-    font-size: 14px;
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
     font-weight:500;
     border: 0;    
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
@@ -186,34 +240,47 @@ text-align: center;
 
 .busqueda hr{    
     width: 75%;
-    margin-top: -5%;
-    margin-bottom: 7.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 /*-------------------------------------------------------*/
-.cantidad{
-    border: 2px solid blue;
+.cantidad{    
+    border: 2px solid red;
     margin: 0 auto;
     text-align: center;
     display: flex; 
     flex-direction: column;
-    width: 20%;
+    width: 50%; 
+    padding: 0 5% 5% 5%;
+        /*arriba, der, abajo, izq*/ 
 }
 .cantidad__numChistes{
-    border-radius: 5px;
-    margin:5%;
-    padding: 5%;
-    font-size: 14px;
+    border-radius: 5px; 
+    margin: 2% auto 5% auto;
+        /*arriba, der, abajo, izq*/
+    padding: 15px;
+    font-size: 16px; 
     font-weight:500;
     border: 0;    
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);   
 }
 .cantidad hr{    
     width: 75%;
-    margin-top: -5%;
-    margin-bottom: 7.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
+.cantidad__cont{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: auto auto auto auto;
+    display: flex;
+    width: 50%;
+    margin-top: 5%;
+}
 /*--------------------------@MENU---------------------------------------------*/
 
 .centrarya {  

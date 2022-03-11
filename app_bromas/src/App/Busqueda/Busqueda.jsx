@@ -14,8 +14,11 @@ export function Busqueda({ toggleWord }) {
     <section id="busqueda" className="busqueda">
       <h2>Piensa una palabra que quieras que se incluya en el chiste </h2>
       <hr />
-      <label htmlFor="palabraClave">Ponme a Prueba!!</label>
-      <input type="text" id="palabraClave" placeholder="Introduce tu palabra deseada" onKeyUp={(evento) => handleWrite(evento.target.value)} className="busqueda__input" />
+      <div className="longitud__cont">
+        <br />
+        <label htmlFor="palabraClave">Ponme a Prueba!!</label>
+        <input type="text" id="palabraClave" placeholder="Con qué lo quieres?" onKeyUp={(evento) => handleWrite(evento.target.value)} className="busqueda__input" />
+      </div>
     </section>
   );
 }
