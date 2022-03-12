@@ -15,6 +15,15 @@ function Chistes({ joke }) {
       <h2>{joke}</h2>
     );
   }
+  //Si hay un error entonces mostramos un mensaje que diciendole que no se ha encontrado ningún chiste
+  if(joke.error === true){
+    return(
+      <fieldset>
+        <h2>Lo sentimos, el chiste era tan gracioso que ni lo hemos encontrado. Aun así disfruta del gif.</h2>
+        <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Imagencita" />
+      </fieldset>
+    );
+  }
   //si la cantidad es igual a undefined pasamos al siguiente if, sino, al esle nº2
   if (joke.amount === undefined) {
     //si además de cumplir el anterior if, el valor de la propiedad type es igual a single entonces
