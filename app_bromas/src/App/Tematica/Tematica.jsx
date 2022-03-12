@@ -14,11 +14,11 @@ function Tematica({ toggleFlags }) {
       <h2>Chiste aleatorio sin contenido no deseado</h2>
       <hr />
       <div className="tematica__botones">
-        <input type="button" value="Sexuales" id="nsfw" className="tematica__button" />
-        <input type="button" value="Religiosos" id="religious" className="tematica__button" />
-        <input type="button" value="Políticos" id="political" className="tematica__button" />
-        <input type="button" value="Racistas" id="racist" className="tematica__button" />
-        <input type="button" value="Explícito" id="explicit" className="tematica__button" />
+        <input type="button" value="Sexuales" id="nsfw" className="button" />
+        <input type="button" value="Religiosos" id="religious" className="button" />
+        <input type="button" value="Políticos" id="political" className="button" />
+        <input type="button" value="Racistas" id="racist" className="button" />
+        <input type="button" value="Explícito" id="explicit" className="button" />
       </div>
     </section>
   );

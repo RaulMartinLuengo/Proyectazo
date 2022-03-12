@@ -145,42 +145,42 @@ export function App() {
                 <Categorias toggleCategory={toggleCategory} toggleCategoryAmount={toggleCategoryAmount} toggleCategoryLength={toggleCategoryLength} toggleCategoryAmountLength={toggleCategoryLengthAmount} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               <Route path="/tematica">
                 <Tematica toggleFlags={toggleFlags} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               <Route path="/longitud">
                 <Longitud toggleLength={toggleLength} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               <Route path="/idioma">
                 <Idioma toggleLanguage={toggleLanguage} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               <Route path="/busqueda">
                 <Busqueda toggleWord={toggleWord} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               <Route path="/cantidad">
                 <Cantidad toggleAmount={toggleAmount} />
                 <div className="render__chiste">
                   <Chistes joke={jokes} />
-                  <button type="reset" className="chiste__button--clean" onClick={handleJoke}>Limpiar Chistes</button>
+                  <button type="reset" className="button button--clean" onClick={handleJoke}>Limpiar Chistes</button>
                 </div>
               </Route>
               {/* Cuidado: El / siempre va al final del Switch */}

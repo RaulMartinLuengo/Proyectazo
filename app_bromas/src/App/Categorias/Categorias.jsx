@@ -56,12 +56,12 @@ function Categorias({
       {/* capturamos el valor del elemento que desencadena el evento onClick, con el propósito de
       llamar a la función categoryChange y pasárselo como prop para que realice el fethc con esas características */}
       <div onClick={(event) => categoryChange(event.target.id)} className="categorias__botones">
-        <input type="button" id="Misc" value="General" className="categorias__button" />
-        <input type="button" id="Programming" value="Programación" className="categorias__button" />
-        <input type="button" id="Dark" value="Chiste Negro" className="categorias__button" />
-        <input type="button" id="Pun" value="Actualidad" className="categorias__button" />
-        <input type="button" id="Spooky" value="Terror" className="categorias__button" />
-        <input type="button" id="Christmas" value="Navidad" className="categorias__button" />
+        <input type="button" id="Misc" value="General" className="button" />
+        <input type="button" id="Programming" value="Programación" className="button" />
+        <input type="button" id="Dark" value="Chiste Negro" className="button" />
+        <input type="button" id="Pun" value="Actualidad" className="button" />
+        <input type="button" id="Spooky" value="Terror" className="button" />
+        <input type="button" id="Christmas" value="Navidad" className="button" />
       </div>
       <div className="categorias__inputs">
         <div className="categorias__numChistes">
