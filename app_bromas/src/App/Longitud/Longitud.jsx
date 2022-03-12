@@ -14,7 +14,7 @@ function Longitud({ toggleLength }) {
       <hr />
       <div className="longitud__cont">
         <br />
-        <label htmlFor="selectLength">Quieres chistes cortos o largos?</label> 
+        <label htmlFor="selectLength">Quieres chistes cortos o largos?</label>
         <select name="selectLenght" idonChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
           <option value="single">Cortos</option>
           <option value="twopart">Largos</option>

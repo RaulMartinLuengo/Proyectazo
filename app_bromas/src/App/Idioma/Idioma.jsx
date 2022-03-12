@@ -4,11 +4,11 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable global-require */
 import React from 'react';
-//definimos función que recibe como prop la función que es pasada en la llamada a este componente. La función recibida es un fetch.
+// definimos función que recibe como prop la función que es pasada en la llamada a este componente. La función recibida es un fetch.
 export default function Idioma({ toggleLanguage }) {
-  //Creamos otra función, la cual recibe como parámetro el valor capturado en el evento onChange del select abajo definido como handleChangeLanguage
+  // Creamos otra función, la cual recibe como parámetro el valor capturado en el evento onChange del select abajo definido como handleChangeLanguage
   const handleChangeLanguage = (language) => {
-    toggleLanguage(language);//Hacemos una llamada a la función fetch pasándole el valor obtenido
+    toggleLanguage(language);// Hacemos una llamada a la función fetch pasándole el valor obtenido
   };
   return (
     <section id="idioma" className="idioma">

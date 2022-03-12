@@ -138,7 +138,7 @@ const images = [
   {
     id: 36,
     url: 'https://c.tenor.com/Rx7qhnyNoOwAAAAC/belle-delphine-belle.gif',
-  }
+  },
 ];
 
 export default function getImagesUrl(id) {
