@@ -3,6 +3,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable global-require */
+/* eslint-disable max-len */
+/* eslint-disbale jsx-a11y/click-events-have-key-events */
+
 import React from 'react';
 // definimos función que recibe como prop la función que es pasada en la llamada a este componente. La función recibida es un fetch.
 export default function Idioma({ toggleLanguage }) {

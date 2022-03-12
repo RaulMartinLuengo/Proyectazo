@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 /* eslint-disable react/forbid-prop-types */
@@ -15,7 +16,7 @@ function Longitud({ toggleLength }) {
       <div className="longitud__cont">
         <br />
         <label htmlFor="selectLength">Quieres chistes cortos o largos?</label>
-        <select name="selectLenght" idonChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
+        <select name="selectLength" onChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
           <option value="single">Cortos</option>
           <option value="twopart">Largos</option>
         </select>

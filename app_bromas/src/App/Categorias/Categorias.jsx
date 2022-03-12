@@ -3,6 +3,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable global-require */
+/* eslint-disable max-len */
+/* eslint-disbale jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 import React from 'react';
 // función que recibe como props 4 funciónes que realizan fetch parametrizadas a una api externa
 function Categorias({

@@ -2,6 +2,9 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable max-len */
+/* eslint-disbale jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 
 import React, { useState } from 'react';
 import './App.css';
@@ -56,7 +59,6 @@ export function App() {
   // En esta otra función, además de categorías, se solicita que la longitud del joke sea entre chistes cortos o largos
   // las props son pasadas a través de la llamada al componente Categorias. Explicar bien la función de este componente
   const toggleCategoryLength = (categoryname, length) => {
-    console.log(length);
     async function fetchJokes() {
       const jokeCategory = await getCategoryLengthJoke(categoryname, length);
       setJokes(jokeCategory);

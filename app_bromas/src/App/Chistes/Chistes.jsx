@@ -2,6 +2,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable global-require */
+/* eslint-disable max-len */
+/* eslint-disbale jsx-a11y/click-events-have-key-events */
+
 import React from 'react';
 import getImagesUrl from './images';
 // La siguiente función recibe como props un array de objetos (jokes). Dicho array es pasado en la llamada es este componente
