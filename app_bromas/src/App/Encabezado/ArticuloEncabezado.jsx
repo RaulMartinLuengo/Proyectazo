@@ -8,7 +8,8 @@ export function ArticuloEncabezado() {
       <article>
         <h2>Página web con los mejores chistes en inglés y en español</h2>
         <p>
-          <b>Advertencia:</b> Alguno de los chistes que consultarás puede que sean violentos
+          <b>Advertencia:</b>
+          Alguno de los chistes que consultarás puede que sean violentos
           o hieran la sensibilidad de alguna/s persona/s. Se recomienda en tal caso que se
           dirijan a la seccion Tematica donde podrán omitir las tematicas que deseen.
         </p>

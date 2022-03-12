@@ -71,7 +71,7 @@ function Chistes({ joke }) {
     <fieldset className="fieldset">
       <h3>{joke.category}</h3>
       <p>{chiste}</p>
-      <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Perro" />
+      <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Foto no encontrada" />
     </fieldset>
   );
 }
