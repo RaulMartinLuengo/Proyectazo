@@ -121,7 +121,7 @@ export function App() {
       <main>
         <div className="container">
           <div className="centrarya">
-            <nav className="centrarya__nav">
+            <nav onClick={handleJoke} onKeyDown={handleJoke} className="centrarya__nav">
               {/* capturamos el evento onClick con el propósito de establecer un valor por defecto para cada vez que se selecciones un elemento del nav
             así, cada vez que iniciemos un componente, nos aparecerá el mismo comentario, y con ello conseguimos que no se queden grabados los chistes anteriormente seleccionados en los otros componentes */}
               <ul className="todo-menu">
