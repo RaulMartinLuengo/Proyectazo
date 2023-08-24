@@ -1,9 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable global-require */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Cantidad({ toggleAmount }) {
   const handleChangeAmount = (valor) => {
@@ -21,4 +17,8 @@ function Cantidad({ toggleAmount }) {
     </section>
   );
 }
+Cantidad.propTypes = {
+  toggleAmount: PropTypes.func.isRequired,
+};
+
 export default Cantidad;

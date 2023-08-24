@@ -1,28 +1,28 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable global-require */
-/* eslint-disable max-len */
-/* eslint-disbale jsx-a11y/click-events-have-key-events */
-
 import React from 'react';
+import PropTypes from 'prop-types';
 import getImagesUrl from './images';
-// La siguiente función recibe como props un array de objetos (jokes). Dicho array es pasado en la llamada es este componente
+
+// La siguiente función recibe como props un array de objetos (jokes).
+// Dicho array es pasado en la llamada es este componente
 function Chistes({ joke }) {
-  // ahora, lo que pretendemos es diferenciar sobre la elección del tipo de chiste en cuanto a su longitud y además para diferenciar cuando
+  // ahora, lo que pretendemos es diferenciar sobre la elección del tipo
+  // de chiste en cuanto a su longitud y además para diferenciar cuando
   // tenemos que setear con el valor por definido por default
   let chiste;
-  // si el tipo de joke es igual a un string, pintamos el primer valor del hook, que en realidad es el valor por default
+  // si el tipo de joke es igual a un string, pintamos el primer
+  // valor del hook, que en realidad es el valor por default
   if (typeof joke === 'string') {
     return (
       <h2>{joke}</h2>
     );
   }
-  // Si hay un error entonces mostramos un mensaje que diciendole que no se ha encontrado ningún chiste
+  // Si hay un error entonces mostramos un mensaje que
+  // diciendole que no se ha encontrado ningún chiste
   if (joke.error === true) {
     return (
       <fieldset>
-        <h2>Lo sentimos, el chiste era tan gracioso que ni lo hemos encontrado. Aun así disfruta del gif.</h2>
+        <h2>Lo sentimos, el chiste era tan gracioso que ni lo hemos encontrado. </h2>
+        <h2> Aun así disfruta del gif.</h2>
         <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Imagencita" />
       </fieldset>
     );
@@ -57,9 +57,12 @@ function Chistes({ joke }) {
             <h3>{jokes.category}</h3>
             {/* el chiste seleccionado */}
             <p>{chiste}</p>
-            {/* para poder devolver una imagen aleatoria con cada chiste, hacemos esta genialidad que se me ha ocurrido asin de rápido.
-            LLamamos a la función getImagesUrl que se encuentra declarada al final del array de objetos de las fotos, a la cual le pasamos
-            un número aleatorio para que nos devuelva la imagen que coincida su id con el número aleatorio  */}
+            {/* para poder devolver una imagen aleatoria con cada chiste, hacemos esta genialidad
+            que se me ha ocurrido asin de rápido.
+            LLamamos a la función getImagesUrl que se encuentra declarada al final del array
+            de objetos de las fotos, a la cual le pasamos
+            un número aleatorio para que nos devuelva la
+            imagen que coincida su id con el número aleatorio  */}
             <img src={getImagesUrl(Math.round(Math.random() * 36))} alt="Perro" />
           </fieldset>
         );
@@ -75,5 +78,9 @@ function Chistes({ joke }) {
     </fieldset>
   );
 }
+
+Chistes.propTypes = {
+  joke: PropTypes.func.isRequired,
+};
 
 export default Chistes;

@@ -1,9 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable global-require */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Longitud({ toggleLength }) {
   const handleLength = (length) => {
@@ -16,7 +12,8 @@ function Longitud({ toggleLength }) {
       <div className="longitud__cont">
         <br />
         <label htmlFor="selectLength">Quieres chistes cortos o largos?</label>
-        <select name="selectLength" onChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
+        <select id="selectLength" name="selectLength" onChange={(evento) => handleLength(evento.target.value)} className="longitud__select">
+          <option value="">Seleccione una longitud</option>
           <option value="single">Cortos</option>
           <option value="twopart">Largos</option>
         </select>
@@ -24,4 +21,8 @@ function Longitud({ toggleLength }) {
     </section>
   );
 }
+
+Longitud.propTypes = {
+  toggleLength: PropTypes.func.isRequired,
+};
 export default Longitud;

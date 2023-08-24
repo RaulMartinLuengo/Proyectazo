@@ -1,16 +1,12 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable global-require */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Tematica({ toggleFlags }) {
   const handleFlags = (flag) => {
     toggleFlags(flag);
   };
   return (
-    <section id="tematica" onClick={(evento) => handleFlags(evento.target.id)} className="tematica">
+    <section id="tematica" onClick={(evento) => handleFlags(evento.target.id)} onKeyDown={(evento) => { if (evento.key === 'Enter') { handleFlags(evento.target.id); } }} className="tematica" tabIndex="0" role="button">
       <h2>Chiste aleatorio sin contenido no deseado</h2>
       <hr />
       <div className="tematica__botones">
@@ -23,5 +19,8 @@ function Tematica({ toggleFlags }) {
     </section>
   );
 }
+Tematica.propTypes = {
+  toggleFlags: PropTypes.func.isRequired,
+};
 
 export default Tematica;

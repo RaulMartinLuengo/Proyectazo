@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 import React from 'react';
 
-export function ArticuloEncabezado() {
+export default function ArticuloEncabezado() {
   return (
     <section id="encabezado" className="encabezado">
       <h1>Bienvenido a CHISTEA</h1>

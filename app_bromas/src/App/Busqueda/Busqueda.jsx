@@ -1,12 +1,7 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/forbid-prop-types */
-/* eslint-disable global-require */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line import/prefer-default-export
-export function Busqueda({ toggleWord }) {
+export default function Busqueda({ toggleWord }) {
   const handleWrite = (word) => {
     toggleWord(word);
   };
@@ -22,4 +17,7 @@ export function Busqueda({ toggleWord }) {
     </section>
   );
 }
-export default Busqueda;
+
+Busqueda.propTypes = {
+  toggleWord: PropTypes.func.isRequired,
+};
